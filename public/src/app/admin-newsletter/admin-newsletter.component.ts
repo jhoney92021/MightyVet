@@ -1,7 +1,9 @@
+// commented out variables and imports not being used.
+
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NewslettersService } from '../http_services/newsletters.service';
-import { AnimationStyleMetadata } from '@angular/animations';
+// import { AnimationStyleMetadata } from '@angular/animations';
 
 @Component({
   selector: 'app-admin-newsletter',
@@ -14,9 +16,12 @@ export class AdminNewsletterComponent implements OnInit {
   email: any;
   constructor(
     private _newslettersService: NewslettersService,
-    private _route: ActivatedRoute,
-    private _router: Router) { }
+    // private _route: ActivatedRoute,
+    // private _router: Router
+    ) { }
   
+  // once the component is initilizes it retrieves the newsletter and stores into email variables once the
+  // observable that was created gets recieves information after being subsribed to.  
   ngOnInit() {
     this.alert = false;
     this.getNewsletter();
