@@ -1,5 +1,7 @@
+// commented out unused variables and imports.
+
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { ActivatedRoute, Params, Router } from '@angular/router';
 import { UsersService } from '../http_services/users.service';
 import { ExcelsService } from '../http_services/excels.service';
 
@@ -13,8 +15,8 @@ export class AdminUsersComponent implements OnInit {
   constructor(
     private _excelsService: ExcelsService,
     private _usersService: UsersService,
-    private _route: ActivatedRoute,
-    private _router: Router
+    // private _route: ActivatedRoute,
+    // private _router: Router
     ) { }
 
   ngOnInit() {
@@ -43,6 +45,7 @@ export class AdminUsersComponent implements OnInit {
         if (x.accreditations.length){
           x.accreditations = x.accreditations.map(y => {
             var title = y.webinar.title;
+            // let or const???
             if(y.credit_received){
               title += ': Completed'
             }
