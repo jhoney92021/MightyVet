@@ -1,5 +1,7 @@
+// commented out unused imports and variables
+
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { ActivatedRoute, Params, Router } from '@angular/router';
 import { PartnersService } from '../http_services/partners.service';
 import { FileUploadService } from '../http_services/file-upload.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
@@ -28,8 +30,8 @@ export class AdminPartnersComponent implements OnInit {
     private _modalsService: NgbModal,
     private _filesUploadService: FileUploadService,
     private _partnersService: PartnersService,
-    private _route: ActivatedRoute,
-    private _router: Router
+    // private _route: ActivatedRoute,
+    // private _router: Router
     ) { }
 
   private onSuccess() {
@@ -47,7 +49,8 @@ export class AdminPartnersComponent implements OnInit {
 
   getPartners(){
     let obs = this._partnersService.getPartners();
-    obs.subscribe(data=>this.partners=data)}
+    obs.subscribe(data=>this.partners=data)
+  }
   addPartner(){
     let obs = this._partnersService.addPartner(this.newPartner);
     obs.subscribe(data=>{
@@ -102,7 +105,6 @@ export class AdminPartnersComponent implements OnInit {
           console.log(err);
         })
     });
-      
     reader.readAsDataURL(file);
   }
 }
