@@ -1,7 +1,9 @@
+// commented out since they were never used
+
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-import { ActivatedRoute, Params, Router } from '@angular/router';
+// import { ActivatedRoute, Params, Router } from '@angular/router';
 import { MentorsService } from '../http_services/mentors.service';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-admin-mentors',
@@ -13,10 +15,10 @@ export class AdminMentorsComponent implements OnInit {
   mentors : any;
   mentorApplication: any;
   constructor(
-    private _modalsService: NgbModal,
+    // private _modalsService: NgbModal,
     private _mentorsService: MentorsService,
-    private _route: ActivatedRoute,
-    private _router: Router
+    // private _route: ActivatedRoute,
+    // private _router: Router
     ) { }
   ngOnInit() {
     this.getApprovals();
